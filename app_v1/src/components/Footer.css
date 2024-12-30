@@ -1,0 +1,18 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: #ffffff; /* Footer의 배경색 설정 */
+    text-align: center; /* 전체 텍스트 중앙 정렬 */
+    height: 5%;
+}
+
+.footer-content {
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 2px;
+}
+
+.footer-content p {
+    margin: 0; /* 하단 텍스트의 여백 제거 */
+    color: rgb(71, 71, 71);
+    font-size: 12px;
+}

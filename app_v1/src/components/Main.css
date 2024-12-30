@@ -1,0 +1,170 @@
+/* src/components/Main.css */
+.main-content {
+    background-color: white;
+}
+
+.intro-content {
+    background-color: white;
+    position: relative;
+    width:100%;
+    height:150px;
+    outline: dashed 1px black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.intro-img img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+.intro {
+    margin-top: 25px;
+    & h2 {
+        font-size: 30px;
+        color: #0073c4;
+        margin: 25px 0 5px;
+        text-align: center;
+    }
+    & p {
+        font-size: 18px;
+        color: #000000;
+        line-height: 1.2;
+        text-align: center;
+    }
+}
+
+.block-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e1eff8;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.block {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 15%; /* 고정된 너비를 사용 */
+    height: 120px; /* 고정된 높이 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    margin: 10px 0;
+
+    & h3 {
+        font-size: 22px;
+        color: #0073c4;
+        margin: 10px 0 5px;
+    }
+
+    & hr {
+        border: none;
+        border-top: 1px solid #070798;
+        margin: 5px 0;
+    }
+
+    & p {
+        white-space: pre-wrap;
+        font-size: 15px;
+        color: #0073c4;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 1200px) {
+    .block {
+      width: 22%; /* 화면이 줄어들 때 블록 너비 확장 */
+      min-width: 160px; /* 최소 너비 보장 */
+    }
+}
+
+@media (max-width: 768px) {
+    .block {
+      width: 45%; /* 태블릿 크기에서 블록 너비 확장 */
+      min-width: 200px; /* 최소 너비 보장 */
+      height: auto; /* 높이를 자동으로 조정 */
+    }
+    
+    h3 {
+      font-size: 12px; /* 글자 크기 조정 */
+    }
+    
+    p {
+      font-size: 9px; /* 글자 크기 조정 */
+    }
+}
+
+@media (max-width: 480px) {
+    .block {
+      width: 100%; /* 모바일 크기에서 블록 너비 100% */
+      min-width: 100%; /* 최소 너비를 100%로 설정 */
+      margin: 5px 0; /* 블록 간격을 줄임 */
+      height: auto; /* 높이를 자동으로 조정 */
+    }
+    
+    h3 {
+      font-size: 14px; /* 모바일 크기에서 글자 크기 조정 */
+    }
+    
+    p {
+      font-size: 10px; /* 모바일 크기에서 글자 크기 조정 */
+    }
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+    button {
+        background-color: hsl(203, 62%, 93%);
+        color: #073f98;
+        border: 2px solid #070798;
+        border-radius: 42px;
+        padding: 8px 3%;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 20px 0;
+        transition: background-color 0.3s ease;
+    }
+}
+
+.clients {
+    h2 {
+        font-size: 30px;
+        color: #0073c4;
+        margin: 10px 0 5px;
+        text-align: center;
+    }
+}
+
+.logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    height: 200px;
+}
+
+.logos-container img {
+    width: calc(20% - 10px); /* 5개씩 배치되도록 너비 설정 */
+    max-width: 100px; /* 로고의 최대 너비 설정 */
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .logos-container img {
+        width: calc(33.33% - 10px); /* 모바일에서 3개씩 배치되도록 너비 설정 */
+    }
+}
+
+@media (max-width: 480px) {
+    .logos-container img {
+        width: calc(33.33% - 10px); /* 작은 모바일에서도 3개씩 배치 */
+    }
+}

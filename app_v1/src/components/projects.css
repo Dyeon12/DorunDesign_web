@@ -1,0 +1,132 @@
+.projects {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.project-container {
+    position: relative;
+    width: 100%;
+    height: 320px; /* 고정된 공간 높이 설정 */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects h2 {
+    font-size: 24px;
+    color: #004a8e;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.year {
+    font-size: 18px;
+    font-weight: bold;
+    color: #004a8e;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.year:hover, .year.active {
+    background-color: #5454542b;
+    font-weight: bold;
+    color: #002649;
+}
+
+.project-bubble {
+	position: relative;
+    width: 40%;
+    height: 240px;
+    max-width: 80%;
+	background: #0073c4;
+	border-radius: 20px;
+    color: white;
+    padding: 1%;
+    margin: 20px auto 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 18px Arial, sans-serif;
+    text-align: left; 
+    margin-bottom: 2px;
+}
+
+.project-bubble:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-bottom-color: #0073c4;
+	border-top: 0;
+	border-left: 0;
+	margin-left: -15px;
+	margin-top: -30px;
+}
+
+.timeline .year {
+    flex: 1; /* 각 년도를 동일한 크기로 */
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+    }
+
+    .project-bubble {
+        max-width: 90%; /* 모바일에서 말풍선 크기 조정 */
+    }
+
+    .bubble-tail {
+        left: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        flex-direction: column;
+    }
+
+    .project-bubble {
+        width: 80%;
+    }
+
+    .bubble-tail {
+        left: 10%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .year-project {
+      width: calc(100% / 4 - 20px); /* 4개의 요소가 한 줄에 배치되도록 설정 */
+    }
+}
+
+@media (max-width: 768px) {
+    .year-project {
+        width: calc(100% / 2 - 20px); /* 2개의 요소가 한 줄에 배치되도록 설정 */
+    }
+}
+
+@media (max-width: 480px) {
+    .year-project {
+        width: 100%; /* 한 줄에 하나의 요소가 배치되도록 설정 */
+        margin-bottom: 20px;
+    }
+}

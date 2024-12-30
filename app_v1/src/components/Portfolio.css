@@ -1,0 +1,63 @@
+/* src/components/Portfolio.css */
+.portfolio-container {
+    box-sizing: border-box;
+}
+
+.portfolio-nav-container {
+    display: flex;
+    width: 100%;
+    background-color: #e1eff8;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-nav {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.portfolio-nav button {
+    background: #e1eff8;
+    color: #004a8e;
+    cursor: pointer;
+    /* transition: background 0.3s, color 0.3s; */
+}
+
+.portfolio-nav button.active {
+    color: rgb(255, 102, 0);
+    font-weight: bold;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.portfolio-item {
+    width: 20%;
+    height: 20vw;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #004a8e;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 100%; /* 모바일에서는 한 개씩 전체 화면으로 보여줌 */
+        padding-top: 100%; /* 정사각형 유지 */
+    }
+}

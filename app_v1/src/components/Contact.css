@@ -1,0 +1,86 @@
+/* src/pages/Contact.css */
+.contact-page {
+    font-family: Arial, sans-serif;
+}
+
+.recommended-case {
+    background-color: #e1eff8;
+    padding: 20px;
+    text-align: center;
+    overflow-x: auto; /* 가로 스크롤 적용 */
+    overflow-y: hidden; /* 세로 스크롤 제거 */
+    p {
+        font-size: 28px;
+        color: #004a8e;
+        margin-bottom: 20px;
+    }
+}
+
+.case-grid {
+    display: flex; /* 가로로 나열되도록 설정 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    gap: 30px; /* 각 아이템 사이 간격 추가 */
+    white-space: nowrap;
+}
+
+.case-item {
+    text-align: center;
+    align-items: center;
+}
+
+.case-item p {
+    color: #004a8e;
+    font-size: 17px;
+    margin-bottom: 10px; /* 텍스트와 이미지 사이 간격 설정 */
+}
+
+.case-item img {
+    display: block;
+    max-width: none; /* 이미지 크기 제한 없음 */
+    height: auto;
+    margin: 0 auto; /* 이미지 중앙 정렬 */
+}
+
+.contact-info {
+    padding: 20px 0;
+    text-align: center;
+    align-items: center;
+    p {
+        font-size: 30px;
+        color: #337ec3;
+        margin-bottom: 10px;
+    }
+}
+
+.contact-content {
+    width: 90%;
+    color: #1a6ebc;
+    align-items: center;
+}
+
+.contact-content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: pre-line; /* 줄바꿈 적용 */
+    text-align: left;
+}
+
+.contact-content .email {
+    font-size: 18px;
+    color: #004a8e;
+}
+
+.contact-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+}
